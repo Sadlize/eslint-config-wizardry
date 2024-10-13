@@ -2,7 +2,6 @@ import importPlugin from 'eslint-plugin-import';
 import importSortPlugin from 'eslint-plugin-simple-import-sort';
 
 export const importsConfig = {
-  files: ['src'],
   plugins: { import: importPlugin, 'simple-import-sort': importSortPlugin },
   rules: {
     'import/export': 'error',
@@ -33,7 +32,7 @@ export const importsConfig = {
     // import/no-unresolved
     'import/no-useless-path-segments': 'error',
     // import/no-webpack-loader-syntax
-    'import/consistent-type-specifier-style': 'error',
+    'import/consistent-type-specifier-style': ['error', 'prefer-inline'],
     // import/dynamic-import-chunkname
     // import/exports-last
     // import/extensions
@@ -44,7 +43,7 @@ export const importsConfig = {
     // import/no-default-export
     // no-named-export
     // no-namespace
-    'import/no-unassigned-import': 'error',
+    'import/no-unassigned-import': ['error', { 'allow': ['**/*.{css,scss}'] }],
     // import/order
     // import/prefer-default-export
 
