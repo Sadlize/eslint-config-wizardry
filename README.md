@@ -12,7 +12,7 @@
 ## Usage
 1. Install the correct versions of each package, which are listed by the command:
 ```sh
-npm i --save-dev eslint eslint-config-wizardry
+npm i --save-dev eslint typescript eslint-config-wizardry
 ```
 2. Add import to your `eslint.config.js` / [any of available config formats](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file])
 ```javascript
