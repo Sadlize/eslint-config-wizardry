@@ -1,21 +1,20 @@
 {
   "name": "eslint-config-wizardry",
   "author": "Alexey Pautov-Brevnov <alexey.pautovbrevnov@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "description": "",
   "type": "module",
   "main": "eslint.config.js",
-  "dependencies": {
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-jsx-a11y": "6.10.0",
-    "eslint-plugin-react": "7.37.1",
-    "eslint-plugin-react-hooks": "5.1.0-rc-d5bba18b-20241009",
-    "eslint-plugin-simple-import-sort": "12.1.1",
-    "typescript-eslint": "8.16.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "9.12.0",
-    "typescript": "5.7.2"
+    "eslint": "9.28.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.33.1"
   }
 }

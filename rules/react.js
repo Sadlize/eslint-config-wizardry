@@ -1,6 +1,6 @@
+import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 
 export const reactConfig = {
   files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],

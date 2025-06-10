@@ -47,7 +47,25 @@ export const importsConfig = {
     // import/order
     // import/prefer-default-export
 
-    'simple-import-sort/imports': 'error',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          ['^.+\\.s?css$'], // Style imports
+          ['^\\u0000'], // Side effect imports
+          [
+            '^@?\\w', // External packages
+            '^@/', // Project root folder imports
+            '^app', '^pages', '^widget', '^features', '^entities', '^shared', // FSD Layers
+          ],
+          [
+            '^\\.\\.(?!/?$)', '^\\.\\./?$', // Parent imports. Put `..` last
+            '^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$', // Other relative imports. Put same-folder imports and `.` last
+            '^.+\\.module.s?css$' // Module css
+          ],
+        ],
+      },
+    ],
     'simple-import-sort/exports': 'error',
   },
 };

@@ -156,7 +156,8 @@ export const baseConfig = {
         'response', // for Express responses
         '$scope', // for Angular 1 scopes
         'staticContext', // for ReactRouter context
-      ]
+      ],
+      ignorePropertyModificationsForRegex: ["^draft"], // for immer
     }],
     'no-plusplus': 'error',
     'no-proto': 'error',
