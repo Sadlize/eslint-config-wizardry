@@ -56,7 +56,7 @@ export const importsConfig = {
           [
             '^@?\\w', // External packages
             '^@/', // Project root folder imports
-            '^app', '^pages', '^widget', '^features', '^entities', '^shared', // FSD Layers
+            '^(app|components|configs|constants|context|hooks|modules|pages|requests|store|styles|types|utils|widget|features|entities|shared)', // Internal folders
           ],
           [
             '^\\.\\.(?!/?$)', '^\\.\\./?$', // Parent imports. Put `..` last
