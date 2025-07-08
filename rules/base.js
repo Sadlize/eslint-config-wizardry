@@ -2,22 +2,22 @@ export const baseConfig = {
   rules: {
     /* Possible problems */
     'array-callback-return': ['error', { allowImplicit: true }],
-    // constructor-super
+    'constructor-super': 'error',
     'for-direction': 'error',
-    // getter-return
+    'getter-return': 'error',
     'no-async-promise-executor': 'error',
     'no-await-in-loop': 'error',
-    // no-class-assign
+    'no-class-assign': 'error',
     'no-compare-neg-zero': 'error',
     'no-cond-assign': ['error', 'always'],
     'no-const-assign': 'error',
     'no-constant-binary-expression': 'error',
     'no-constant-condition': 'error',
-    // no-constructor-return
+    'no-constructor-return': 'error',
     'no-control-regex': 'error',
     'no-debugger': 'error',
     'no-dupe-args': 'error',
-    // no-dupe-class-members
+    'no-dupe-class-members': 'error',
     'no-dupe-else-if': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
@@ -33,67 +33,72 @@ export const baseConfig = {
     'no-irregular-whitespace': 'error',
     'no-loss-of-precision': 'error',
     'no-misleading-character-class': 'error',
-    // no-new-native-nonconstructor
+    'no-new-native-nonconstructor': 'error',
     'no-obj-calls': 'error',
     'no-promise-executor-return': 'error',
     'no-prototype-builtins': 'error',
     'no-self-assign': ['error', { props: true }],
     'no-self-compare': 'error',
-    // no-setter-return
+    'no-setter-return': 'error',
     'no-sparse-arrays': 'error',
     'no-template-curly-in-string': 'error',
-    // no-this-before-super
-    // no-undef
+    'no-this-before-super': 'error',
+    // no-undef: off (to enable this, we need to configure globals)
     'no-unexpected-multiline': 'error',
-    // no-unmodified-loop-condition
+    // no-unmodified-loop-condition: off
     'no-unreachable': 'error',
     'no-unreachable-loop': 'error',
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
     'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
-    // no-unused-private-class-members
+    'no-unused-private-class-members': 'error',
     'no-unused-vars': ['error', { args: 'after-used', ignoreRestSiblings: true }],
     'no-use-before-define': 'error',
     'no-useless-assignment': 'error',
     'no-useless-backreference': 'error',
-    // require-atomic-updates
+    'require-atomic-updates': ['error', { 'allowProperties': true }],
     'use-isnan': 'error',
     'valid-typeof': ['error', { requireStringLiterals: true }],
 
     /* Suggestions */
-    // accessor-pairs
+    // accessor-pairs: off
     'arrow-body-style': ['error', 'as-needed'],
     'block-scoped-var': 'error',
     camelcase: ['error', { properties: 'never', ignoreImports: true }],
-    // capitalized-comments
-    // class-methods-use-this
-    // complexity
+    // capitalized-comments: off
+    'class-methods-use-this': 'error',
+    // complexity: off
     'consistent-return': 'error',
-    // consistent-this
+    // consistent-this: off
     curly: ['error', 'multi-line'],
     'default-case': ['error', { commentPattern: '^no default$' }],
     'default-case-last': 'error',
     'default-param-last': 'error',
     'dot-notation': 'error',
     eqeqeq: ['error', 'always', { null: 'ignore' }],
-    // func-name-matching
+    // func-name-matching: off
     'func-names': 'error',
     'func-style': 'off',
-    // grouped-accessor-pairs
+    'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': 'error',
-    // id-denylist
-    // id-length
-    // id-match
-    // init-declarations
-    // logical-assignment-operators
-    // max-classes-per-file
-    // max-depth
-    // max-lines
-    // max-lines-per-function
-    // max-nested-callbacks
-    // max-params
-    // max-statements
-    // new-cap
+    // id-denylist: off
+    // id-length: off
+    // id-match: off
+    // init-declarations: off
+    'logical-assignment-operators': ['error', 'never'],
+    'max-classes-per-file': ['error', 1],
+    // max-depth: off
+    // max-lines: off
+    // max-lines-per-function: off
+    // max-nested-callbacks: off
+    // max-params: off
+    // max-statements: off
+    'new-cap': ['error', {
+      newIsCap: true,
+      newIsCapExceptions: [],
+      capIsNew: false,
+      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
+    }],
     'no-alert': 'warn',
     'no-array-constructor': 'error',
     'no-bitwise': 'error',
@@ -102,7 +107,7 @@ export const baseConfig = {
     'no-console': ['error', { 'allow': ['warn', 'error'] }],
     'no-continue': 'error',
     'no-delete-var': 'error',
-    // no-div-regex
+    // no-div-regex: off
     'no-else-return': ['error', { allowElseIf: false }],
     'no-empty': 'error',
     'no-empty-function': ['error', {
@@ -112,28 +117,34 @@ export const baseConfig = {
         'methods',
       ]
     }],
-    // no-empty-static-block
-    // no-eq-null (eqeqeq instead)
+    'no-empty-static-block': 'error',
+    // (eqeqeq instead)
+    // no-eq-null: off
     'no-eval': 'error',
     'no-extend-native': 'error',
-    // no-extra-bind
+    'no-extra-bind': 'error',
     'no-extra-boolean-cast': 'error',
     'no-extra-label': 'error',
     'no-global-assign': 'error',
-    // no-implicit-coercion
-    // no-implicit-globals
+    'no-implicit-coercion': ['off', {
+      boolean: false,
+      number: true,
+      string: true,
+      allow: [],
+    }],
+    // no-implicit-globals: off
     'no-implied-eval': 'error',
-    // no-inline-comments
-    // no-invalid-this
+    // no-inline-comments: off
+    'no-invalid-this': 'warn',
     'no-iterator': 'error',
     'no-label-var': 'error',
     'no-labels': 'error',
     'no-lone-blocks': 'error',
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
-    // no-magic-numbers
+    // no-magic-numbers: off
     'no-multi-assign': 'error',
-    // no-negated-condition
+    // no-negated-condition: off
     'no-nested-ternary': 'error',
     'no-new': 'error',
     'no-new-func': 'error',
@@ -145,16 +156,14 @@ export const baseConfig = {
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-        'accumulator', // for reduce accumulators
-        'e', // for e.returnvalue
-        'ctx', // for Koa routing
-        'context', // for Koa routing
-        'req', // for Express requests
-        'request', // for Express requests
-        'res', // for Express responses
-        'response', // for Express responses
-        '$scope', // for Angular 1 scopes
+        'acc',
+        'accumulator',
+        'ctx',
+        'context',
+        'req',
+        'request',
+        'res',
+        'response',
         'staticContext', // for ReactRouter context
       ],
       ignorePropertyModificationsForRegex: ["^draft"], // for immer
@@ -164,10 +173,7 @@ export const baseConfig = {
     'no-redeclare': 'error',
     'no-regex-spaces': 'error',
     'no-restricted-exports': ['error', {
-      restrictedNamedExports: [
-        'default', // use `export default` to provide a default export
-        'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
-      ],
+      restrictedNamedExports: ['default', 'then'],
     }],
     'no-restricted-globals': [
       'error',
@@ -240,7 +246,7 @@ export const baseConfig = {
       'toolbar',
       'top',
     ],
-    // no-restricted-imports
+    // no-restricted-imports: off
     'no-restricted-properties': ['error', {
       object: 'arguments',
       property: 'callee',
@@ -304,25 +310,25 @@ export const baseConfig = {
     'no-sequences': 'error',
     'no-shadow': 'error',
     'no-shadow-restricted-names': 'error',
-    // no-ternary
+    // no-ternary: off
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
-    // no-undefined
-    // 'no-underscore-dangle': ['error', { enforceInMethodNames: true }],
+    // no-undefined: off
+    // 'no-underscore-dangle': off
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unused-expressions': 'error',
     'no-unused-labels': 'error',
-    // no-useless-call
+    'no-useless-call': 'error',
     'no-useless-catch': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',
-    // no-useless-constructor
+    'no-useless-constructor': 'error',
     'no-useless-escape': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
     'no-var': 'error',
     'no-void': 'error',
-    // no-warning-comments
+    // no-warning-comments: off
     'no-with': 'error',
     'object-shorthand': ['error', 'always', {
       ignoreConstructors: false,
@@ -345,8 +351,10 @@ export const baseConfig = {
       enforceForRenamedProperties: false,
     }],
     'prefer-exponentiation-operator': 'error',
+    // arguably, an analysis is needed (ES2018 or newer)
     // prefer-named-capture-group
     'prefer-numeric-literals': 'error',
+    // to enable need to target ES2022 or newer
     // prefer-object-has-own
     'prefer-object-spread': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
@@ -355,12 +363,13 @@ export const baseConfig = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     radix: 'error',
-    // require-await
-    // require-unicode-regexp
+    // require-await: off
+    // require-unicode-regexp: off
     'require-yield': 'error',
-    // sort-imports
-    // sort-keys
-    // sort-vars
+    // we use different sorting rules
+    // sort-imports: off
+    // sort-keys: off
+    // sort-vars: off
     strict: ['error', 'never'],
     'symbol-description': 'error',
     'vars-on-top': 'error',
