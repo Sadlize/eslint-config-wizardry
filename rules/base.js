@@ -56,7 +56,7 @@ export const baseConfig = {
     'no-use-before-define': 'error',
     'no-useless-assignment': 'error',
     'no-useless-backreference': 'error',
-    'require-atomic-updates': ['error', { 'allowProperties': true }],
+    'require-atomic-updates': ['error', { allowProperties: true }],
     'use-isnan': 'error',
     'valid-typeof': ['error', { requireStringLiterals: true }],
 
@@ -104,7 +104,7 @@ export const baseConfig = {
     'no-bitwise': 'error',
     'no-caller': 'error',
     'no-case-declarations': 'error',
-    'no-console': ['error', { 'allow': ['warn', 'error'] }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-continue': 'error',
     'no-delete-var': 'error',
     // no-div-regex: off
@@ -118,8 +118,7 @@ export const baseConfig = {
       ]
     }],
     'no-empty-static-block': 'error',
-    // (eqeqeq instead)
-    // no-eq-null: off
+    // no-eq-null: off (eqeqeq instead)
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
@@ -314,7 +313,7 @@ export const baseConfig = {
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
     // no-undefined: off
-    // 'no-underscore-dangle': off
+    // no-underscore-dangle: off
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unused-expressions': 'error',
     'no-unused-labels': 'error',
@@ -351,11 +350,9 @@ export const baseConfig = {
       enforceForRenamedProperties: false,
     }],
     'prefer-exponentiation-operator': 'error',
-    // arguably, an analysis is needed (ES2018 or newer)
-    // prefer-named-capture-group
+    // prefer-named-capture-group (arguably, an analysis is needed (ES2018 or newer))
     'prefer-numeric-literals': 'error',
-    // to enable need to target ES2022 or newer
-    // prefer-object-has-own
+    // prefer-object-has-own: off (to enable need to target ES2022 or newer)
     'prefer-object-spread': 'error',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
@@ -366,8 +363,7 @@ export const baseConfig = {
     // require-await: off
     // require-unicode-regexp: off
     'require-yield': 'error',
-    // we use different sorting rules
-    // sort-imports: off
+    // sort-imports: off (we use different sorting rules)
     // sort-keys: off
     // sort-vars: off
     strict: ['error', 'never'],

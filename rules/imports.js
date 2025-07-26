@@ -43,7 +43,7 @@ export const importsConfig = {
     // import/no-default-export
     // no-named-export
     // no-namespace
-    'import/no-unassigned-import': ['error', { 'allow': ['**/*.{css,scss}'] }],
+    'import/no-unassigned-import': ['error', { allow: ['**/*.{css,scss}'] }],
     // import/order
     // import/prefer-default-export
 

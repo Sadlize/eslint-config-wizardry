@@ -22,20 +22,24 @@ export const reactConfig = {
   rules: {
     'no-useless-assignment': 'off',
 
-    // react/boolean-prop-naming
+    // react/boolean-prop-naming: off
     'react/button-has-type': ['error', {
       button: true,
       submit: true,
       reset: false,
     }],
     'react/checked-requires-onchange-or-readonly': 'error',
-    'react/default-props-match-prop-types': ['error', { allowRequiredDefaults: false }],
-    // 'react/destructuring-assignment': ['error', 'always'],
-    // react/display-name
-    // react/forbid-component-props
-    // react/forbid-dom-props
-    // react/forbid-elements
-    'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
+    'react/default-props-match-prop-types': ['error', {
+      allowRequiredDefaults: false,
+    }],
+    // react/destructuring-assignment: off,
+    // react/display-name: off
+    // react/forbid-component-props: off
+    // react/forbid-dom-props: off
+    // react/forbid-elements: off
+    'react/forbid-foreign-prop-types': ['warn', {
+      allowInPropTypes: true,
+    }],
     'react/forbid-prop-types': ['error', {
       forbid: ['any', 'array', 'object'],
       checkContextTypes: true,
@@ -47,55 +51,76 @@ export const reactConfig = {
       unnamedComponents: 'function-expression',
     }],
     'react/hook-use-state': 'error',
-    // react/iframe-missing-sandbox
+    // react/iframe-missing-sandbox: off
     'react/jsx-boolean-value': ['error', 'never'],
-    // react/jsx-child-element-spacing
+    // react/jsx-child-element-spacing: off (prettier)
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-closing-tag-location': 'error',
-    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
-    // 'react/jsx-curly-newline': ['error', {
-    //   multiline: 'consistent',
-    //   singleline: 'consistent',
-    // }],
-    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+    'react/jsx-curly-brace-presence': ['error', {
+      props: 'never',
+      children: 'never',
+    }],
+    // react/jsx-curly-newlineL off (prettier)
+    'react/jsx-curly-spacing': ['error', 'never', {
+      allowMultiline: true,
+    }],
     'react/jsx-equals-spacing': ['error', 'never'],
-    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
-    // jsx-first-prop-new-line
+    'react/jsx-filename-extension': ['error', {
+      extensions: ['.jsx', '.tsx'],
+    }],
+    // jsx-first-prop-new-line: off
     'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-handler-names': ['off', {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
     }],
-    // 'react/jsx-indent': ['error', 2],
-    // 'react/jsx-indent-props': ['error', 2],
-    // react/jsx-key
-    // react/jsx-max-depth
-    // 'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
-    // react/jsx-newline
-    // react/jsx-no-bind
+    // react/jsx-indent: off (prettier)
+    // react/jsx-indent-props: off (prettier)
+    // react/jsx-key: off
+    // react/jsx-max-depth: off
+    // react/jsx-max-props-per-line: off (prettier),
+    // react/jsx-newline: off (prettier)
+    'react/jsx-no-bind': ['error', {
+      ignoreRefs: true,
+      allowArrowFunctions: true,
+      allowFunctions: false,
+      allowBind: false,
+      ignoreDOMComponents: true,
+    }],
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-constructed-context-values': 'error',
-    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
-    // 'react/jsx-no-leaked-render': ['error', { "validStrategies": ["coerce"] }],
-    // react/jsx-no-literals
-    'react/jsx-no-script-url': ['error', [{ name: 'Link', props: ['to'] }]],
-    'react/jsx-no-target-blank': ['error', { enforceDynamicLinks: 'always' }],
+    'react/jsx-no-duplicate-props': ['error', {
+      ignoreCase: true,
+    }],
+    'react/jsx-no-leaked-render': ['error', {
+      validStrategies: ['ternary', 'coerce'],
+    }],
+    // react/jsx-no-literals: off
+    'react/jsx-no-script-url': ['error', [{
+      name: 'Link',
+      props: ['to'],
+    }]],
+    'react/jsx-no-target-blank': ['error', {
+      enforceDynamicLinks: 'always',
+    }],
     'react/jsx-no-undef': 'error',
     'react/jsx-no-useless-fragment': 'error',
-    // react/jsx-one-expression-per-line
-    'react/jsx-pascal-case': ['error', { allowAllCaps: true }],
+    // react/jsx-one-expression-per-line: off (prettier)
+    'react/jsx-pascal-case': ['error', {
+      allowAllCaps: true,
+    }],
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-props-no-spread-multi': 'error',
-    // react/jsx-props-no-spreading,
-    // react/jsx-sort-default-props (Deprecated -> react/sort-default-props)
+    // react/jsx-props-no-spreading: off
+    // react/jsx-sort-default-props (deprecated -> react/sort-default-props)
     'react/jsx-sort-props': ['error', {
-      'callbacksLast': true,
-      'shorthandFirst': true,
-      'ignoreCase': true,
-      'noSortAlphabetically': true,
-      'reservedFirst': true
+      callbacksLast: true,
+      shorthandFirst: true,
+      ignoreCase: true,
+      noSortAlphabetically: true,
+      reservedFirst: true,
     }],
-    // react/jsx-space-before-closing (Deprecated -> react/jsx-tag-spacing)
+    // react/jsx-space-before-closing (deprecated -> react/jsx-tag-spacing)
     'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
@@ -104,61 +129,101 @@ export const reactConfig = {
     }],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
-    // 'react/jsx-wrap-multilines': ['error', {
-    //   declaration: 'parens-new-line',
-    //   assignment: 'parens-new-line',
-    //   return: 'parens-new-line',
-    //   arrow: 'parens-new-line',
-    //   condition: 'parens-new-line',
-    //   logical: 'parens-new-line',
-    //   prop: 'parens-new-line',
-    // }],
-    // react/no-access-state-in-setstate
-    // react/no-adjacent-inline-elements
+    // react/jsx-wrap-multilines: off (prettier)
+    'react/no-access-state-in-setstate': 'error',
+    // react/no-adjacent-inline-elements: off
     'react/no-array-index-key': 'error',
     'react/no-arrow-function-lifecycle': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'warn',
     'react/no-danger-with-children': 'error',
-    // react/no-deprecated
-    // react/no-did-mount-set-state
-    // react/no-did-update-set-state
-    // react/no-direct-mutation-state
+    // react/no-deprecated: off
+    'react/no-did-mount-set-state': 'error',
+    'react/no-did-update-set-state': 'error',
+    'react/no-direct-mutation-state': 'error',
     'react/no-find-dom-node': 'error',
     'react/no-invalid-html-attribute': 'error',
-    // react/no-is-mounted
-    // react/no-multi-comp
+    'react/no-is-mounted': 'error',
+    // react/no-multi-comp: off
     'react/no-namespace': 'error',
-    // react/no-object-type-as-default-prop
-    // react/no-redundant-should-component-update
+    // react/no-object-type-as-default-prop: off (analysis)
+    'react/no-redundant-should-component-update': 'error',
     'react/no-render-return-value': 'error',
-    // react/no-set-state
+    // react/no-set-state: off
     'react/no-string-refs': 'error',
-    // react/no-this-in-sfc
+    'react/no-this-in-sfc': 'error',
     'react/no-typos': 'error',
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
-    // react/no-unsafe
+    // react/no-unsafe: off
     'react/no-unstable-nested-components': 'error',
-    // react/no-unused-class-component-methods
-    // react/no-unused-prop-types
-    // react/no-unused-state
-    // react/no-will-update-set-state
-    // react/prefer-es6-class
-    // react/prefer-exact-props
-    // react/prefer-read-only-props
+    'react/no-unused-class-component-methods': 'error',
+    // react/no-unused-prop-types: off
+    'react/no-unused-state': 'error',
+    'react/no-will-update-set-state': 'error',
+    'react/prefer-es6-class': ['error', 'always'],
+    // react/prefer-exact-props: off
+    // react/prefer-read-only-props: off (analysis)
     'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
-    // react/prop-types
-    // 'react/react-in-jsx-scope': 'error',
-    'react/require-default-props': ['error', { 'functions': 'defaultArguments' }],
-    // react/require-optimization
-    // react/require-render-return
+    // react/prop-types: off
+    // react/react-in-jsx-scope: off
+    'react/require-default-props': ['error', { functions: 'defaultArguments' }],
+    // react/require-optimization: off
+    'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
-    // react/sort-comp
-    // react/sort-default-props
-    // react/sort-prop-types
-    // state-in-constructor
-    // react/static-property-placement
+    'react/sort-comp': ['error', {
+      order: [
+        'static-variables',
+        'static-methods',
+        'instance-variables',
+        'lifecycle',
+        '/^handle.+$/',
+        '/^on.+$/',
+        'getters',
+        'setters',
+        '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+        'instance-methods',
+        'everything-else',
+        'rendering',
+      ],
+      groups: {
+        lifecycle: [
+          'displayName',
+          'propTypes',
+          'contextTypes',
+          'childContextTypes',
+          'mixins',
+          'statics',
+          'defaultProps',
+          'constructor',
+          'getDefaultProps',
+          'getInitialState',
+          'state',
+          'getChildContext',
+          'getDerivedStateFromProps',
+          'componentWillMount',
+          'UNSAFE_componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'UNSAFE_componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'UNSAFE_componentWillUpdate',
+          'getSnapshotBeforeUpdate',
+          'componentDidUpdate',
+          'componentDidCatch',
+          'componentWillUnmount'
+        ],
+        rendering: [
+          '/^render.+$/',
+          'render'
+        ],
+      },
+    }],
+    // react/sort-default-props: off
+    // react/sort-prop-types: off
+    // react/state-in-constructor: off (analysis)
+    // react/static-property-placement: off (analysis)
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
 
@@ -167,12 +232,12 @@ export const reactConfig = {
     'react-hooks/exhaustive-deps': 'error',
 
     /* a11y */
-    // jsx-a11y/accessible-emoji (Deprecated)
+    // jsx-a11y/accessible-emoji: off (deprecated)
     'jsx-a11y/alt-text': ['error', {
       elements: ['img'],
       img: ['Image'],
     }],
-    // jsx-a11y/anchor-ambiguous-text
+    // jsx-a11y/anchor-ambiguous-text: off
     'jsx-a11y/anchor-has-content': 'error',
     'jsx-a11y/anchor-is-valid': ['error', {
       components: ['Link'],
@@ -184,7 +249,7 @@ export const reactConfig = {
     'jsx-a11y/aria-proptypes': 'error',
     'jsx-a11y/aria-role': ['error', { ignoreNonDOM: false }],
     'jsx-a11y/aria-unsupported-elements': 'error',
-    // jsx-a11y/autocomplete-valid
+    // jsx-a11y/autocomplete-valid: off
     'jsx-a11y/click-events-have-key-events': 'error',
     'jsx-a11y/control-has-associated-label': ['error', {
       labelAttributes: ['label'],
@@ -217,8 +282,8 @@ export const reactConfig = {
     'jsx-a11y/iframe-has-title': 'error',
     'jsx-a11y/img-redundant-alt': 'error',
     'jsx-a11y/interactive-supports-focus': 'error',
-    // jsx-a11y/label-has-associated-control
-    // jsx-a11y/label-has-for (Deprecated)
+    // jsx-a11y/label-has-associated-control: off
+    // jsx-a11y/label-has-for: off (deprecated)
     'jsx-a11y/lang': 'error',
     'jsx-a11y/media-has-caption': 'error',
     'jsx-a11y/mouse-events-have-key-events': 'error',
@@ -252,7 +317,7 @@ export const reactConfig = {
       tags: [],
       roles: ['tabpanel'],
     }],
-    // jsx-a11y/no-onchange (Deprecated)
+    // jsx-a11y/no-onchange: off (deprecated)
     'jsx-a11y/no-redundant-roles': 'error',
     'jsx-a11y/no-static-element-interactions': ['error', {
       handlers: [
